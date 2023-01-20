@@ -20,7 +20,7 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <mainClass>com.github.foiovituh.reflectester.tests.CallTest</mainClass>
+                <mainClass>com.github.foiovituh.reflectester.example.tests.UseReflecTesterExample</mainClass>
               </manifest>
             </archive>
           </configuration>
