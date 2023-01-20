@@ -23,23 +23,21 @@ public class ReflecTester {
     
     public void run() {
         if (clazz.isAnnotationPresent(TestClass.class)) {
-            final List<Method> methods = Stream.of(clazz.getDeclaredMethods())
-                    .collect(toList());
-            
-            for (Method method : methods) {
-                if (method.isAnnotationPresent(TestMethod.class)
-                        && method.getParameterCount() == 0
-                        && method.getReturnType() == void.class
-                        && Modifier.isStatic(method.getModifiers())) {
-                    try {
-                        method.invoke(null);
-                    } catch (IllegalAccessException
-                            | IllegalArgumentException
-                            | InvocationTargetException invokeMethodException) {
-                        // TODO: logs
-                    }
-                }
-            }
+            Stream.of(clazz.getDeclaredMethods())
+                    .forEach(method -> {
+                        if (method.isAnnotationPresent(TestMethod.class)
+                                && method.getParameterCount() == 0
+                                && method.getReturnType() == void.class
+                                && Modifier.isStatic(method.getModifiers())) {
+                            try {
+                                method.invoke(null);
+                            } catch (IllegalAccessException
+                                    | IllegalArgumentException
+                                    | InvocationTargetException invokeMethodException) {
+                                // TODO: logs
+                            }
+                        }
+                    });
         } else {
             // TODO: logs
         }
