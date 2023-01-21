@@ -4,6 +4,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 final class ErrorHandler {
+    private ErrorHandler() {
+    }
+    
     public static final void logAndExit(Logger logger, Level level, String message,
             Exception exception, int exitCode) {
         logger.log(level, message, exception);
