@@ -1,10 +1,10 @@
 package com.github.foiovituh.reflectester.engine;
 
-import com.github.foiovituh.reflectester.models.TestClass;
+import com.github.foiovituh.reflectester.annotations.TestClass;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import java.util.stream.Stream;
-import com.github.foiovituh.reflectester.models.TestMethod;
+import com.github.foiovituh.reflectester.annotations.TestMethod;
 
 public class ReflecTester {
     private Class<?> clazz;

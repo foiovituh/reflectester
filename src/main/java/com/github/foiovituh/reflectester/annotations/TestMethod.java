@@ -1,4 +1,4 @@
-package com.github.foiovituh.reflectester.models;
+package com.github.foiovituh.reflectester.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

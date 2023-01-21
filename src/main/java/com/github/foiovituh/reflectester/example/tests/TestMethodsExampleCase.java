@@ -1,7 +1,7 @@
 package com.github.foiovituh.reflectester.example.tests;
 
-import com.github.foiovituh.reflectester.models.TestClass;
-import com.github.foiovituh.reflectester.models.TestMethod;
+import com.github.foiovituh.reflectester.annotations.TestClass;
+import com.github.foiovituh.reflectester.annotations.TestMethod;
 
 @TestClass
 public class TestMethodsExampleCase {
