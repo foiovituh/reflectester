@@ -5,16 +5,19 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import java.util.stream.Stream;
 import com.github.foiovituh.reflectester.annotations.TestMethod;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ReflecTester {
     private Class<?> clazz;
+    private static final Logger LOGGER = Logger.getLogger(ReflecTester.class.getName());
     
     public ReflecTester(String className) {
         try {
             this.clazz = Class.forName(className);
         } catch (ClassNotFoundException classNotFoundException) {
-            // TODO: logs
-            System.exit(0);
+            ErrorHandler.logAndExit(LOGGER, Level.WARNING, className,
+                    classNotFoundException, 1);
         }
     }
     
@@ -31,12 +34,13 @@ public class ReflecTester {
                             } catch (IllegalAccessException
                                     | IllegalArgumentException
                                     | InvocationTargetException invokeMethodException) {
-                                // TODO: logs
+                                ErrorHandler.logAndExit(LOGGER, Level.SEVERE,
+                                        method.getName(), invokeMethodException, 1);
                             }
                         }
                     });
         } else {
-            // TODO: logs
+            ErrorHandler.handleTestClassAnnotationNotPresent(LOGGER, clazz.getName());
         }
     }
 }
