@@ -10,10 +10,10 @@ Minimalist implementation of a library for Java unit test execution.
 ---
 
 ### :cd: Setup
-1- Open a terminal, navigate to the directory of the Java project you want to install and run:
+1- Open a terminal, clone this repository, navigate to the directory of the Java project you want to install, and run:
 ```
 mvn install:install-file \
-   -Dfile="/full-path-to-reflectester-installation-directory/reflectester/target/reflectester-1.0-SNAPSHOT.jar" \
+   -Dfile="/full-path-to-reflectester-clone-directory/reflectester/target/reflectester-1.0-SNAPSHOT.jar" \
    -DgroupId=com.github.foiovituh \
    -DartifactId=reflectester \
    -Dversion=1.0-SNAPSHOT \
