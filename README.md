@@ -1,15 +1,11 @@
-## :gear: reflecTester
+# reflecTester :gear:
 Minimalist implementation of a library for Java unit test execution.
 
----
-
-### :link: Requirements
+## Requirements :link:
 - Maven
 - Java 17+
 
----
-
-### :cd: Setup
+## Setup :cd:
 1- Open a terminal, clone this repository, navigate to the directory of the Java project you want to install, and run:
 ```
 mvn install:install-file \
@@ -21,9 +17,7 @@ mvn install:install-file \
    -DgeneratePom=true
 ```
 
----
-
-### :arrow_forward: How to use
+## How to use :arrow_forward:
 1- Map your test class with @TestClass annotation, and test methods with @TestMethod (must be static, return void and have no arguments), for example:
 ```
 @TestClass
@@ -56,19 +50,15 @@ public class ShoppingTrolleyTestExecutor {
     }
 }
 ```
----
 
-### :busts_in_silhouette: Do you want help me?
-
+## Do you want help me? :busts_in_silhouette:
 If you have any ideas or wish to contribute to the project, contact me on Twitter @vituohto or send me a pull request! :)
 
----
-
-### :white_flag: License
+## License :white_flag:
 ```
 MIT License
 
-Copyright (c) 2023 @vituohto
+Copyright (c) 2023 Vitu Ohto
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
